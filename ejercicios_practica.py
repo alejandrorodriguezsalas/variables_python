@@ -35,8 +35,28 @@ def ej1():
 
     '''
 
+    print('''Ingrese dos números para realizar las siguientes operaciones:
+    - Suma
+    - Resta
+    - Multiplicación
+    - Division
+    - Potencia''')
+    print("Ingrese primer número")
+    a = int(input())
+    print("Ingrese segundo número")
+    b = int(input())
+    print("La suma entre {} y {} es {}".format(a,b,a+b))
+    print("La resta: {} menos {} es igual {}".format(a,b,a-b))
+    print("La multiplicación entre {} y {} es {}".format(a,b,a*b))
+    print("La división de {} entre {} es {}".format(a,b,a/b))
+    print("La pontencia de {} a la {} es {}".format(a,b,a**b))
 
-def ej2():
+
+
+
+
+
+def ej2(): 
     print('Ejercicios de práctica numérica y cadenas')
     '''
     Realice un programa que consulte por consola:
@@ -53,8 +73,21 @@ def ej2():
       altura de la persona
       Nuevamente debe aclarar el campo de cada uno, para el que lo lea
       entienda de que se está hablando.
-
     '''
+    print("Ingrese el nombre y apellido de la persona")
+    nombre = str(input())
+    print("ingrese DNI")
+    dni = int(input())
+    print("Ingrese la edad de la persona")
+    edad = int(input())
+    print("ingrese la altura")
+    altura = float (input())
+
+    print("Nombre completo: {}   DNI: {}".format(nombre,dni))
+    print("Nombre completo: {}   edad:{}     altura:{}".format(nombre,edad,altura))
+
+
+    
 
 
 def ej3():
@@ -89,6 +122,31 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
 
     '''
+    print("Ingrese nombre completo del padre")
+    padre_1 = str(input())
+    print("ingrese nombre completo de la madre")
+    padre_2 = str(input())
+    print("Ingrese el nombre del hijo/a")
+    hijo = str(input())
+  
+    nombre_1, apellido1 = padre_1.split(" ")
+    nombre_2, apellido2 = padre_2.split(" ")
+    
+    print("El nombre completo del hijo/a sera:  {} {} {}".format(hijo,apellido1,apellido2))
+    
+
+    #Otra forma de hacerlo
+    nombre_hijo = hijo + ' ' + apellido1 + ' ' + apellido2
+    print("El nombre completo del hijo/a sera:  {}".format(nombre_hijo))
+    
+
+
+
+   
+    
+   
+
+
 
 
 def ej4():
@@ -124,6 +182,22 @@ def ej4():
     Cualquier duda con el método split pueden consultarla por el campus
     '''
 
+    print("Ingrese nombre completo de la primera persona")
+    persona_2 = str(input())
+
+    print("Ingrese nombre completo del pariente en duda")
+    persona_1 = str(input())
+
+    nombre, apellido = persona_2.split(" ")
+
+    es_pariente = apellido in persona_1
+    print("{} es pariente de {}? {}".format(persona_1,persona_2,es_pariente))
+
+
+
+
+
+
 
 def ej5():
     # Ejercicios de práctica con cadenas
@@ -150,11 +224,18 @@ def ej5():
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
 
+    print("Ingrese su nombre completo: ")
+    nombre = str(input())
+
+    print("Nombre en minuscula: {}".format(nombre.lower()))
+    print("Nombre en mayuscula: {}".format(nombre.upper()))
+    print("Comienzo del texto en mayuscula: {}".format(nombre.capitalize()))
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
-    # ej3()
-    # ej4()
-    # ej5()
+    ej2()
+    ej3()
+    ej4()
+    ej5()

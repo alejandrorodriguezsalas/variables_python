@@ -4,8 +4,7 @@ Tipos de variables [Python]
 Ejercicios de clase
 ---------------------------
 Autor: Inove Coding School
-Version: 1.1
-
+Version: 1.3
 Descripcion:
 Programa creado para poner a prueba los conocimientos
 adquiridos durante la clase
@@ -13,7 +12,7 @@ adquiridos durante la clase
 
 __author__ = "Inove Coding School"
 __email__ = "alumnos@inove.com.ar"
-__version__ = "1.1"
+__version__ = "1.3"
 
 
 def ej1():
@@ -27,7 +26,9 @@ def ej1():
     numero_2 = int(input())
 
     # Alumno: Imprima en pantalla los dos números decimales solicitados
-    # print(....)
+    print('''        PRIMER número: {}
+        SEGUNDO número: {}'''.format(numero_1,numero_2))
+
 
     # Alumno: Calcule la suma, resta, división y multiplicación de los números ingresados
     # numero_1, numero_2
@@ -35,42 +36,23 @@ def ej1():
     # El resultado de sumar 4 y 2 es 6
 
     # Suma
+    suma = numero_1 + numero_2
+    print("SUMA: {} + {} = {}".format(numero_1,numero_2,suma))
 
     # Resta
+    resta = numero_1 + numero_2
+    print("RESTA: {} - {} = {}".format(numero_1,numero_2,resta))
 
     # División
+    div = numero_1 / numero_2
+    print("DIVISION: {} / {} = {}".format(numero_1,numero_2,div))
 
     # Multiplicación
+    mult = numero_1 * numero_2
+    print("MULTIPLICACION: {} x {} = {}".format(numero_1,numero_2,mult))
 
 
 def ej2():
-    # Ejercicios de práctica numérica
-
-    # Operadores con números reales
-    print('Ingrese el primer número real a operar:')
-    numero_3 = float(input())
-
-    print('Ingrese el segundo número real a operar:')
-    numero_4 = float(input())
-
-    # Alumno: Imprima en pantalla los dos números reales solicitados
-    # print(....)
-
-    # Alumno: Calcule la suma, resta, división y multiplicación de los números ingresados
-    # numero_3, numero_4
-    # Imprima en pantalla todos los resultados con el siguiente formato de ejemplo:
-    # El resultado de sumar 4 y 2 es 6
-
-    # Suma
-
-    # Resta
-
-    # División
-
-    # Multiplicación
-
-
-def ej3():
     # Ejemplos variables de texto
 
     # Ingrese primero su nombre y luego su apellido
@@ -83,11 +65,14 @@ def ej3():
 
     # Imprima su nombre completo
 
+    print("su nombre completo es: {} {}".format(nombre,apellido))
+
     # Almacenar su nombre completo en una variable
-    # nombre_completo = .....
+    nombre_completo = nombre + apellido
 
     # Imprimir la cantidad de letras que posee su nombre completo
 
+    print("La cantidad de letras que posee su nombre es: {}".format(len(nombre_completo)) )
 
 def ej3():
     # Ejemplos variables de texto
@@ -106,6 +91,8 @@ def ej3():
     # De cada palabra debe tomar la primera letra y armar el acrónimo
     # Ejemplo: Alumbrado, barrido y limpieza --> ABL
     # Imprimir el resultado en pantalla
+    print('''ACRONIMO:
+            {}, {}, {} --> {}'''.format(palabra_1,palabra_2,palabra_3,palabra_1[0]+palabra_2[0]+palabra_3[0]))
 
 
 def ej4():
@@ -123,9 +110,20 @@ def ej4():
     # Formar una nueva palabra con los recortes solicitados
     # Imprima en pantalla los resultados
 
+    subpalabra_1 = palabra_1[:3]
+    subpalabra_2 = palabra_2[len(palabra_2)-3:]
+
+    nueva_palabra = subpalabra_1 + subpalabra_2
+
+    print('''Recorte de la primera palabra: {}
+Recorte de la segunda palabra: {}
+
+    Combinación de ambos recortes:  {}'''.format(subpalabra_1,subpalabra_2,nueva_palabra))
+
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
-    # ej2()
-    # ej3()
-    # ej4()
+    ej2()
+    ej3()
+    ej4()
